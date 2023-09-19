@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Box from '@mui/material/Box';
+
+import Header from './components/Header/Header';
+import Field from './components/Field/Field';
+import TodoList from './components/TodoList/TodoList';
+import Filters from './components/Filters/Filters';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box
+        sx={{
+          width: '500px',
+          // height: 300,
+          // backgroundColor: 'primary.dark',
+          // '&:hover': {
+          //   backgroundColor: 'primary.main',
+          //   opacity: [0.9, 0.8, 0.7],
+          // },
+        }}
+
+        display="flex"
+        flexDirection="column"
+      >
+        <Header />
+        <Field />
+        <TodoList />
+        <Filters />
+      </Box>
     </div>
   );
 }
